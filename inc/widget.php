@@ -5,7 +5,7 @@ class tmls_widget extends WP_Widget
 {
 	function tmls_widget() {
 		$widget_options = array(
-		'classname'		=>		'tmls-widget',
+		'classname'		=>	'tmls-widget',
 		'description' 	=>		'Testimonials Widget'
 		);
 		
