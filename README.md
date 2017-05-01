@@ -1,4 +1,4 @@
-# testimonials-creator
+# WordPress Testimonials Creator
 
 Testimonials Creator is a WordPress plugin with main purpose of building awesome testimonial showcase on your website. The plugin is packed with flexible testimonial builder, rating submission form, various design layouts and absolute freedom on styling. It’s possible to craft almost any design you can imagine. It has a shortcode generator.
 
