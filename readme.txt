@@ -1,10 +1,11 @@
 === Testimonials Creator ===
-Contributors: adoncreatives, dickensayieko
+Contributors: adoncreatives, dickensayiekos
 Tags: clients, visual composer, flat design, grid, responsive, reviews, rich snippets, seo, slider, star rating, testimonials
-Donate link: http://www.adoncreatives.net/donate/
-Requires at least: 3.0.1
-Tested up to: 4.7.3
-Stable tag: 1.5
+Donate link: https://dictrithemes.com/donate/
+Requires at least: 6.5
+Tested up to: 6.6.2
+Stable tag: 1.6
+Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,7 +44,7 @@ A short list of features includes:
 - Stars rating/clients review
 
 SUPPORT:
-We value our plugin users, don’t hesitate to contact us here http://www.adoncreatives.net/testimonial-creator/ if you require any assistance and remember to select the name of the plugin. We will try our best to reply within the shortest time possible.
+We value our plugin users, don’t hesitate to contact us here https://dictrithemes.com/testimonial-creator/ if you require any assistance and remember to select the name of the plugin. We will try our best to reply within the shortest time possible.
 
 
 We hope you enjoy the testimonial creator plugin! 
@@ -61,7 +62,7 @@ e.g.
 
 == Frequently Asked Questions ==
 
-= Please also check the more comprehensive FAQ on http://www.adoncreatives.net/testimonial-creator/ =
+= Please also check the more comprehensive FAQ on https://dictrithemes.com/testimonial-creator/ =
 
 .
 
@@ -70,7 +71,7 @@ e.g.
 Please ensure that: 
 
 - You're using the latest version of the plugin(s)
-- Your site is running on PHP 5.4 or above 
+- Your site is running on PHP 7.4 or above 
 
 If you're not familiar with those please contact your hosting company or server admin.
 
@@ -82,9 +83,14 @@ Most likely you have the WP Cache plugin installed. Please de-activate and then 
 
 == Screenshots ==
 
-Visit the plugin page for more http://www.adoncreatives.net/testimonial-creator/
+Visit the plugin page for more https://dictrithemes.com/testimonial-creator/
 
 == Changelog ==
+
+= 1.6 =
+* Updated to the latest WordPress version 6.6.2
+* Fixed some bugs
+* Updated compatibility with PHP 8.x
 
 = 1.4 =
 * Updated to the latest WordPress version 4.7.3

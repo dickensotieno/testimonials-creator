@@ -151,19 +151,20 @@
 			<?php if ( defined( 'WPB_VC_VERSION' ) ) { echo 'Also you can use testimonials element into visual composer page builder to insert saved shortcodes.'; } ?>
 		</p>
 		
+		<p>To change the default settings, please adjust them on the right.</p>
 		<div id="tmls_div_shortcode" style="<?php if($post->post_status !='auto-draft'){ echo 'display:none;'; } ?>">[tmls]</div>
 		
 		<div id="tmls_div_shortcode_saved" style="<?php if($post->post_status =='auto-draft'){ echo 'display:none;'; } ?>">[tmls_saved id="<?php echo $post->ID; ?>"]</div>
 		
 		<input type="hidden" name="tmls_shortcode" id="tmls_shortcode" value="<?php echo get_post_meta($post->ID, 'shortcode', true); ?>" />
 		
-		<div id="tmls_gene_short_preview">Loading ...</div>
+		<div id="tmls_gene_short_preview" style="display:none;">Loading ...</div>
 		
 		<div id="hire-us">
          
-		<p style="margin-top: 30px;">This plugin is 100% free. Please do us a BIG favor and give us a 5 star rating <a href="https://wordpress.org/support/plugin/testimonials-creator/reviews/" target="_new">here</a>. If you're not happy, please <a href="mailto:hello@adoncreatives.net">get in touch with us</a>, so that we can sort it out. For more information about the plugin, please click <a href="http://www.adoncreatives.net/testimonial-creator/" target="_new">here</a>. Thank you!</p>
+		<p style="margin-top: 30px;">This plugin is 100% free. Please do us a BIG favor and give us a 5 star rating <a href="https://wordpress.org/support/plugin/testimonials-creator/reviews/" target="_new">here</a>. If you're not happy, please <a href="mailto:hello@dictrithemes.com">get in touch with us</a>, so that we can sort it out. For more information about the plugin, please click <a href="http://www.dictrithemes.com/testimonial-creator/" target="_new">here</a>. Thank you!</p>
      
-	    <p style="font-weight:bold;">Need top-notch Wordpress development work at a competitive price? Visit us at <a href="http://www.adoncreatives.net/">www.adoncreatives.net</a></p>
+	    <p style="font-weight:bold;">Need top-notch Wordpress development work at a competitive price? Visit us at <a href="https://www.dictrithemes.com/hire-us">www.dictrithemes.com</a></p>
        
 	    </div>
 		<?php
@@ -370,6 +371,8 @@
 		
 		?>
 		<div id="tmls_gene_short_leftSidebar">
+			
+			<h3>Testimonial Creator</h3>
 			
 			<input type="hidden" id="tmls_wpml_current_lang" name="tmls_wpml_current_lang" value="<?php echo $tmls_wpml_current_lang; ?>" />
 			<input type="hidden" id="tmls_id" name="tmls_id" value="<?php echo 'tmls'.$post->ID; ?>" />

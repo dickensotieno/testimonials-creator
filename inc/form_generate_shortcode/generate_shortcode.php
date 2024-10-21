@@ -368,6 +368,8 @@
 		
 		<div id="tmls_gene_short_leftSidebar">
 		
+		    <h3>Testimonial Creator</h3>
+		
 			<div class="tmls_sectionTitle">General Settings</div>
 			
 			<div class="tmls_rowsContainer tmls_rowsContainerOpend" >

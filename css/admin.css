@@ -16,6 +16,8 @@
 
 #tmls_gene_short_leftSidebar {
 	position:relative;
+	background: #f9f9f9;
+    padding: 15px;
 }
 
 #tmls_gene_short_leftSidebar .tmls_sectionTitle {

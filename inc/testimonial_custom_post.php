@@ -124,70 +124,65 @@
 		testimonial Value Function
 	----------------------------------------------------------------------*/
 	function tmls_columns_display($tmls_columns, $post_id){
-		
-		global $post;
-		
-		$width = (int) 80;
-		$height = (int) 80;
-		
-		if ( 'thumbnail' == $tmls_columns ) {
-			
-			if ( has_post_thumbnail($post_id)) {
-				$thumbnail_id = get_post_meta( $post_id, '_thumbnail_id', true );
-				$thumb = wp_get_attachment_image( $thumbnail_id, array($width, $height), true );
-				echo $thumb;
-			}
-			else 
-			{
-				echo __('None');
-			}
-
-		}
+    
+    global $post;
+    
+    $width = (int) 80;
+    $height = (int) 80;
+    
+    if ( 'thumbnail' == $tmls_columns ) {
+        if ( has_post_thumbnail($post_id)) {
+            $thumbnail_id = get_post_meta( $post_id, '_thumbnail_id', true );
+            $thumb = wp_get_attachment_image( $thumbnail_id, array($width, $height), true );
+            echo $thumb;
+        } else {
+            echo __('None');
+        }
+    }
+    
+    if ( 'logo_image' == $tmls_columns ) {
+        echo get_post_meta($post_id, 'logo', true) ? '<img src="'.get_post_meta($post_id, 'logo', true).'" alt="" style="max-width:80px;max-height:80px;" />' : __('None');
+    }
+    
+    if ( 'order' == $tmls_columns ) {
+        echo $post->menu_order;
+    }
+    
+    if ( 'position' == $tmls_columns ) {
+        echo get_post_meta($post_id, 'position', true);
+    }
+    
+    if ( 'company' == $tmls_columns ) {
+        echo '<a href="http://'.get_post_meta($post_id, 'company_website', true).'" target="'.get_post_meta($post_id, 'company_link_target', true).'">'.get_post_meta($post_id, 'company', true).'</a>';
+    }
+    
+    if ( 'rating' == $tmls_columns ) {
+        if(get_post_meta($post_id, 'rating', true) != '') {
+            echo "<div class='tmls-fa tmls_rating tmls_rating_".get_post_meta($post_id, 'rating', true)."'></div>";
+        }
+    }
+    
+    if ( 'tmlscategories' == $tmls_columns ) {
+        $terms = get_the_terms( $post_id, 'tmlscategory' );
         
-        if ( 'logo_image' == $tmls_columns ) {
-            echo get_post_meta($post_id, 'logo', true) ? '<img src="'.get_post_meta($post_id, 'logo', true).'" alt="" style="max-width:80px;max-height:80px;" />' : __('None');
-		}
-		
-		if ( 'order' == $tmls_columns ) {
-			echo $post->menu_order;
-		}
-		
-		if ( 'position' == $tmls_columns ) {
-			echo get_post_meta($post_id, 'position', true);
-		}
-		
-		if ( 'company' == $tmls_columns ) {
-			echo '<a href="http://'.get_post_meta($post_id, 'company_website', true).'" target="'.get_post_meta($post_id, 'company_link_target', true).'">'.get_post_meta($post_id, 'company', true).'</a>';
-		}
-		
-		if ( 'rating' == $tmls_columns ) {
-			if(get_post_meta($post_id, 'rating', true)!='') {
-				echo "<div class='tmls-fa tmls_rating tmls_rating_".get_post_meta($post_id, 'rating', true)."'></div>";
-			}
-		}
-		
-		if ( 'tmlscategories' == $tmls_columns ) {
-			
-			$terms = get_the_terms( $post_id , 'tmlscategory');
-			$count = count($terms);
-			
-			if ( $terms ){
-				
-				$i = 0;
-				
-				foreach ( $terms as $term ) {
-					echo '<a href="'.admin_url( 'edit.php?post_type=tmls&tmlscategory='.$term->slug ).'">'.$term->name.'</a>';	
-					
-					if($i+1 != $count) {
-						echo " , ";
-					}
-					$i++;
-				}
-				
-			}
-		}
-		
-	}
+        if ( $terms && !is_wp_error( $terms ) ) {
+            $count = count($terms);
+            $i = 0;
+            
+            foreach ( $terms as $term ) {
+                echo '<a href="'.admin_url( 'edit.php?post_type=tmls&tmlscategory='.$term->slug ).'">'.$term->name.'</a>';
+                
+                if ( $i + 1 != $count ) {
+                    echo ", ";
+                }
+                $i++;
+            }
+        } else {
+            echo __('None');
+        }
+    }
+}
+
 	
 	/*----------------------------------------------------------------------
 		Add manage_tmls_posts_columns Filter 
@@ -284,7 +279,9 @@
 		<hr class="horizontalRuler"/>
 
         <!-- Logo -->
-							
+		
+        <div style="display:none;">
+		
 		<p><label for="logo_input"><strong>Logo Image</strong></label></p>
 
         <input type="hidden" name="logo_input" id="logo_input" class="regular-text code" value="<?php echo get_post_meta($post->ID, 'logo', true); ?>" />
@@ -295,6 +292,8 @@
         <input name="removelogo_button" id="removelogo_button" type="button" class="button-secondary" value="Remove" <?php if(get_post_meta($post->ID, 'logo', true)===''){ echo 'style="display:none;"'; } ?> />
 		
 		<hr class="horizontalRuler"/>
+		
+		</div>
 
 
 		<!-- Email -->

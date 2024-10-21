@@ -1,11 +1,11 @@
 <?php
 	/*
 	Plugin Name: Testimonials Creator
-	Plugin URI: http://www.adoncreatives.net
+	Plugin URI: https://dictrithemes.com/testimonial-creator/
 	Description: Testimonials Creator is a plugin to display testimonials, reviews or quotes in multiple ways! It is also compatible with Visual Composer Plugin.
-	Version: 1.5
-	Author: adoncreatives
-	Author URI: http://www.adoncreatives.net
+	Version: 1.6
+	Author: Dictrithemes
+	Author URI: https://dictrithemes.com
 	License: GPLv2 or later
 	*/
 	
@@ -43,11 +43,13 @@
 			
 			wp_register_style( 'tmls-admin-style', plugins_url('css/admin.css', __FILE__) );
 			wp_enqueue_style( 'tmls-admin-style' );
-			
-            if ( $post->post_type == 'tmls' ) {
-                wp_register_script( 'tmls-admin-js', plugins_url('js/admin.js', __FILE__), null, null, true );
-			    wp_enqueue_script( 'tmls-admin-js' );
+
+			function tmls_enqueue_admin_scripts() {
+                wp_enqueue_media();
+				wp_register_script( 'tmls_admin_script', plugins_url('js/ts_admin.js', __FILE__), null, null, true );
             }
+            add_action('admin_enqueue_scripts', 'tmls_enqueue_admin_scripts');
+				
             
 			if ( $post->post_type == 'tmls_sc' ) {
                 
