@@ -1,7 +1,7 @@
 <?php
 	/*
 	Plugin Name: Testimonials Creator
-	Plugin URI: https://dictrithemes.com/testimonial-creator/
+	Plugin URI: https://wordpress.org/plugins/testimonials-creator/
 	Description: Testimonials Creator is a plugin to display testimonials, reviews or quotes in multiple ways! It is also compatible with Visual Composer Plugin.
 	Version: 1.6
 	Author: Dictrithemes

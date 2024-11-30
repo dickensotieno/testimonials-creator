@@ -1,8 +1,8 @@
 === Testimonials Creator ===
 Contributors: adoncreatives, dickensayiekos
-Tags: clients, visual composer, flat design, grid, responsive, reviews, rich snippets, seo, slider, star rating, testimonials
+Tags: testimonials, reviews, testimonials creator,  rich snippets, star rating
 Requires at least: 6.5
-Tested up to: 6.6.2
+Tested up to: 6.7.1
 Stable tag: 1.6
 Requires PHP: 7.4
 License: GPLv2 or later
