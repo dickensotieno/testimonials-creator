@@ -1,7 +1,6 @@
 === Testimonials Creator ===
 Contributors: adoncreatives, dickensayiekos
 Tags: clients, visual composer, flat design, grid, responsive, reviews, rich snippets, seo, slider, star rating, testimonials
-Donate link: https://dictrithemes.com/donate/
 Requires at least: 6.5
 Tested up to: 6.6.2
 Stable tag: 1.6
@@ -44,7 +43,7 @@ A short list of features includes:
 - Stars rating/clients review
 
 SUPPORT:
-We value our plugin users, don’t hesitate to contact us here https://dictrithemes.com/testimonial-creator/ if you require any assistance and remember to select the name of the plugin. We will try our best to reply within the shortest time possible.
+We value our plugin users, don’t hesitate to contact us here https://wordpress.org/support/plugin/testimonials-creator/ if you require any assistance and remember to select the name of the plugin. We will try our best to reply within the shortest time possible.
 
 
 We hope you enjoy the testimonial creator plugin! 
@@ -62,7 +61,7 @@ e.g.
 
 == Frequently Asked Questions ==
 
-= Please also check the more comprehensive FAQ on https://dictrithemes.com/testimonial-creator/ =
+= Please also check the more comprehensive FAQ on https://wordpress.org/support/plugin/testimonials-creator/ =
 
 .
 
@@ -83,7 +82,7 @@ Most likely you have the WP Cache plugin installed. Please de-activate and then 
 
 == Screenshots ==
 
-Visit the plugin page for more https://dictrithemes.com/testimonial-creator/
+Visit the plugin page for more https://wordpress.org/plugins/testimonials-creator/
 
 == Changelog ==
 
