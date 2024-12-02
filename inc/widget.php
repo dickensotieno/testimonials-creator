@@ -10,9 +10,9 @@ class tmls_widget extends WP_Widget
         );
         
         parent::__construct(
-            'tmls_widget',  // Base ID of your widget
-            'Testimonials', // Name of your widget
-            $widget_options // Optional array of options
+            'tmls_widget',  // Base ID
+            'Testimonials', // Name of the widget
+            $widget_options // array of options
         );
     }
     

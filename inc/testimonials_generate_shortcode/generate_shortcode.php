@@ -164,7 +164,7 @@
          
 		<p style="margin-top: 30px;">This plugin is 100% free. Please do us a BIG favor and give us a 5 star rating <a href="https://wordpress.org/support/plugin/testimonials-creator/reviews/" target="_new">here</a>. If you're not happy, please <a href="mailto:hello@dictrithemes.com">get in touch with us</a>, so that we can sort it out. For more information about the plugin, please click <a href="http://www.dictrithemes.com/testimonial-creator/" target="_new">here</a>. Thank you!</p>
      
-	    <p style="font-weight:bold;">Need top-notch Wordpress development work at a competitive price? Visit us at <a href="https://www.dictrithemes.com/hire-us">www.dictrithemes.com</a></p>
+	    <p style="font-weight:bold;">Need top-notch Wordpress development work at a competitive price? Visit us at <a href="https://wordpress.org/plugins/testimonials-creator/">www.dictrithemes.com</a></p>
        
 	    </div>
 		<?php
